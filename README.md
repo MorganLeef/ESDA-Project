@@ -13,19 +13,19 @@ These errors include everything from duplicate records, to sample names that nee
 		2. Provide code/scripts that:
 			- Makes it easy to find segments or files of interest using patterns (grep)
 			- Makes it easier to move segments between files without having to copy/paste (grep)
-			- Automates data retreival from online sources by simply entering a state abbreviation (wget)
+			- Automates data retreival from online sources by simply entering a state abbreviation (wget)  
 
-	## Data Source:
+## Data Source:
 		The data to be "cleaned" will be pulled from the International Tree Ring Database (https://www.ncdc.noaa.gov/data-access/paleoclimatology-data/datasets/tree-ring).  Example files with formatting errors are included here (XXXXX.rwl, XXXXX.rwl, XXXX.rwl).  
 	
-	## Implementation:
+## Implementation:
 		R or Bash? I recommend R since more people will use it, even if that means calling a bash script from R. Code and scripts will be added to a public repository on GitHub.com, as they become available. As a public repository, other users are able to contribute code. Each script or line of code will also have to include instructions for their use and implemenation, based on the user's unique needs.  
 		
-	## Products:
+## Products:
 		A collection of tools that researchers can use to produce data that is formatted correctly, and runs smoothly in R. 
 		
 		
-	Questions:
+## Questions:
 		1.) Are all these objectives realistic/achievable? _Probably not all, but you should work through them as you can_
 		2.) Are there other errors that would need to be addressed that I have not included? _you have identified the main sources of formatting errors, good work_
 		3.) What other file maintenance commands could I include in addition to grep and wget? _using a loop and cat to put all the .rwl files in a directory into a single .rwl file._
