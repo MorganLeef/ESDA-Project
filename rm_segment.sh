@@ -1,4 +1,6 @@
-#This script removes a specified segment or segments (up to ten segments at a time)
+#This script moves a specified segment or segments (in this case only one segment) to their own "bad" .rwl file, and creates a new file with only the "good" segments remaining.
 #Usage: bash rm_segment.sh "filename" "first sample to remove" "second sample to remove" "etc"
+#Note that you must specify enough of the sample name to only remove that sample
 
-grep -ve "$2" -e "$3" -e "$4" -e "$5" -e "$6" -e "$7" -e "$8" -e "$9" -e "$10" "$1" > "$1"_bad.rwl
+grep -e "$2" "$1" > "$1"_bad.rwl
+grep -ve "$2" "$1" > "$1"_good.rwl
